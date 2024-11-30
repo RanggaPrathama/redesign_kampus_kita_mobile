@@ -20,6 +20,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Container(
               width: double.infinity,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Stack(
                       alignment: Alignment.topCenter,
@@ -30,7 +31,78 @@ class _ProfilePageState extends State<ProfilePage> {
                         _profileImage(),
                       ],
                     ),
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                      child: Text("Account", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))),
 
+                  SizedBox(height: 10,),
+
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Column(
+                      children: [
+                        Card(
+                          elevation: 1,
+                          color: Colors.white,
+                          child: ListTile(
+                            leading: Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                  color: Colors.blue.withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Icon(FontAwesomeIcons.user, color: Colors.blue),
+                            ),
+                            title: Text("Profile"),
+                            onTap: (){},
+                            trailing: Icon(FontAwesomeIcons.chevronRight),
+                          ),
+                        ),
+                        // Divider(
+                        //   height: 1,
+                        //   color: Colors.grey.shade300,
+                        //   thickness: 1,
+                        // )
+                      ],
+                    )
+                  ),
+
+                  Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Column(
+                        children: [
+                          Card(
+                            elevation: 1,
+                            color: Colors.white,
+                            child: ListTile(
+                              leading: Container(
+                                width: 50,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                    color: Colors.red.withOpacity(0.1),
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Icon(FontAwesomeIcons.doorOpen, color: Colors.red),
+                              ),
+                              title: Text("Profile"),
+                              onTap: (){},
+                              trailing: Icon(FontAwesomeIcons.chevronRight),
+                            ),
+                          ),
+                          // Divider(
+                          //   height: 1,
+                          //   color: Colors.grey.shade300,
+                          //   thickness: 1,
+                          // )
+                        ],
+                      )
+                  ),
                 ]
               ),
             )
